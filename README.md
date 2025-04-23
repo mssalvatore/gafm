@@ -1,4 +1,14 @@
-# GAFM - Go Ahead, Fuzz me
+# GAFM - Go Ahead, Fuzz Me
+
+Go Ahead, Fuzz Me (GAFM) is a tarpit for HTTP fuzzers and content discovery
+tools. It aims to engage such tools and keep them busy attacking a decoy
+instead of a valuable target.
+
+GAFM works by responding to HTTP requests with a fake, randomly-generated
+directory listing. This fake directory contains other fake directories which
+contain more fake directories. A recursive discovery tool will expend time and
+resources to plumb the depths of an infinite well of directories until its
+depth limit is reached or it consumes all of its system's RAM.
 
 ## How tos
 ### How to run GAFM
